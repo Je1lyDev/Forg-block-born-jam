@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scripts/spawnManger.gd" type="Script" id=1]
+
+[node name="spawnManger" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="BossSpawnPoint" type="Position2D" parent="."]
+position = Vector2( 896, 296 )
+
+[node name="spawnPos" type="Node2D" parent="."]
+
+[node name="SpawnPoint1" type="Position2D" parent="spawnPos"]
+position = Vector2( 962, 130 )
+
+[node name="SpawnPoint2" type="Position2D" parent="spawnPos"]
+position = Vector2( 962, 210 )
+
+[node name="SpawnPoint3" type="Position2D" parent="spawnPos"]
+position = Vector2( 960, 296 )
+
+[node name="SpawnPoint4" type="Position2D" parent="spawnPos"]
+position = Vector2( 960, 384 )
+
+[node name="SpawnPoint5" type="Position2D" parent="spawnPos"]
+position = Vector2( 960, 456 )
+
+[node name="SpawnPoint6" type="Position2D" parent="spawnPos"]
+position = Vector2( 962, 162 )
+
+[node name="SpawnPoint7" type="Position2D" parent="spawnPos"]
+position = Vector2( 962, 250 )
+
+[node name="SpawnPoint8" type="Position2D" parent="spawnPos"]
+position = Vector2( 960, 328 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="BossEneterTimer" type="Timer" parent="."]
+wait_time = 5.0
+
+[node name="HealthTimer" type="Timer" parent="."]
+wait_time = 25.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="BossEneterTimer" to="." method="_on_BossEneterTimer_timeout"]
+[connection signal="timeout" from="HealthTimer" to="." method="_on_Timer2_timeout"]

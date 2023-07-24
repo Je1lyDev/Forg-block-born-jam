@@ -1,0 +1,8 @@
+[gd_scene format=2]
+
+[node name="CPUParticles2D" type="CPUParticles2D"]
+emitting = false
+amount = 11
+one_shot = true
+speed_scale = 3.35
+color = Color( 1, 0, 0, 1 )
